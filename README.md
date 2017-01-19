@@ -1,6 +1,6 @@
-# doorgets-ng-translate
+# doorgets-ng-translate [![Build Status](https://travis-ci.org/doorgets/ng-translate.svg?branch=master)](https://travis-ci.org/doorgets/ng-translate)
 
-Angular 2 translation module i18n (internationalization) from JSON file with pluralization (Zero value state included) 
+Angular 2 translation module i18n (internationalization) from JSON file with pluralization (Zero value state included)
 
 Exemple: http://www.ng-translate.com
 
@@ -136,7 +136,7 @@ Set Languages, Current and Default:
   }
 ```
 
-####4. Finally, create a `locale` folder at the root of your project with appropiate country traduction files 
+####4. Finally, create a `locale` folder at the root of your project with appropiate country traduction files
 ```
 |-- + locale/
     |-- en.json
@@ -275,7 +275,7 @@ Set Languages, Current and Default:
   }
 ```
 
-####4. Finally, create a `locale` folder at the `public` folder of your project with appropiate country traduction files 
+####4. Finally, create a `locale` folder at the `public` folder of your project with appropiate country traduction files
 ```
 |-- + public/
     |-- + locale/
@@ -430,7 +430,7 @@ Set Languages, Current and Default:
   });
 ```
 
-####4. Finally, create a `locale` folder at the `assets` folder of your project with appropiate country traduction files 
+####4. Finally, create a `locale` folder at the `assets` folder of your project with appropiate country traduction files
 ```
 |-- + resources/
 |-- + src/
@@ -491,7 +491,7 @@ Collection params: __["John Doe", "Mounir R'Quiba", "Paris"]__
   // $ + position => $0 => John Doe
   // $ + position => $1 => Mounir R'Quiba
   // $ + position => $2 => Paris
-  "Hello $0, my name is $1, i live in $2" 
+  "Hello $0, my name is $1, i live in $2"
   // result => "Salut John Doe, je m'appel Mounir R'Quiba, je vie à Paris"
 ```
 
@@ -513,7 +513,7 @@ Collection params: __[2, 1]__
 ```ts
   // $ + position => $0 => 2
   // $ + position => $1 => 1
-  "I have [($0|$0 apple|$0 apples)] in [($1|$1 bag|$1 bags)]" 
+  "I have [($0|$0 apple|$0 apples)] in [($1|$1 bag|$1 bags)]"
   // result => "J'ai 2 pommes dans 1 sac"
 ```
 
@@ -548,7 +548,7 @@ Collection params: __[1, 1]__
 ```ts
   // $ + position => $0 => 1
   // $ + position => $1 => 1
-  "I have [($0|$0 apple|$0 apples|nothing)] in [($1|$1 bag|$1 bags|my bag)]" 
+  "I have [($0|$0 apple|$0 apples|nothing)] in [($1|$1 bag|$1 bags|my bag)]"
   // result => "J'ai une pomme dans mon sac"
 ```
 
@@ -556,7 +556,7 @@ Collection params: __[0, 0]__
 ```ts
   // $ + position => $0 => 0
   // $ + position => $1 => 0
-  "I have [($0|$0 apple|$0 apples|nothing)] in [($1|$1 bag|$1 bags|my bag)]" 
+  "I have [($0|$0 apple|$0 apples|nothing)] in [($1|$1 bag|$1 bags|my bag)]"
   // result => "Je n'ai rien"
 ```
 
@@ -585,13 +585,13 @@ __./locale/fr.json__
 }
 ```
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate]>Are you ready?</span>
 ```
 > *Output:* __Êtes-vous prêt ?__
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate]="'Are you ready?'"></span>
 ```
@@ -617,13 +617,13 @@ __./locale/fr.json__
 }
 ```
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate]>label.ready</span>
 ```
 > *Output:* __Êtes-vous prêt ?__
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate]="label.ready'"></span>
 ```
@@ -646,7 +646,7 @@ __./locale/fr.json__
 }
 ```
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate] [dgTranslateOptions]="[myName]">
       Hello $0
@@ -656,7 +656,7 @@ myName = Mounir R'Quiba
 
 > *Output:* __Salut Mounir R'Quiba__
 
-__@Directive:__ 
+__@Directive:__
 ```html
     <span [dgTranslate]="'Hello $0'" [dgTranslateOptions]="[myName]"></span>
 ```
