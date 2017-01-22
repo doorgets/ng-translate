@@ -1,4 +1,4 @@
-# doorgets-ng-translate [![Build Status](https://travis-ci.org/doorgets/ng-translate.svg?branch=master)](https://travis-ci.org/doorgets/ng-translate)
+# doorgets-ng-translate [![Build Status](https://travis-ci.org/doorgets/ng-translate.svg?branch=master)](https://travis-ci.org/doorgets/ng-translate) [![Dependency Status](https://david-dm.org/doorgets/ng-translate.svg)](https://david-dm.org/doorgets/ng-translate)
 
 Angular 2 translation module i18n (internationalization) from JSON file with pluralization (Zero value state included)
 
