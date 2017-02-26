@@ -4,6 +4,7 @@ Angular 2 (ngx) ng2 translate module i18n (internationalization) from JSON file 
 
 Demo: http://www.ng-translate.com
 
+#Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
   * [SystemJS](#configuration-with-systemjs)
@@ -149,6 +150,8 @@ Set Languages, Current and Default:
 |-- systemjs.config.js
 ```
 
+**[Back to top](#table-of-contents)**
+
 ###Configuration with Webpack
 
 #### 1. Import doorgets-ng-translate module into vendor.ts file:
@@ -289,6 +292,8 @@ Set Languages, Current and Default:
 |-- tsconfig.json
 |-- webpack.config.js
 ```
+
+**[Back to top](#table-of-contents)**
 
 ###Configuration with Ionic2
 
@@ -450,6 +455,8 @@ Set Languages, Current and Default:
 |-- ionic.config.json
 ```
 
+**[Back to top](#table-of-contents)**
+
 ##How it works
 
 ###Interpolation without params
@@ -573,6 +580,8 @@ Explanation
 
 > __block 4:__ `nothing` is the translated sentence when $0 <= 0
 
+
+**[Back to top](#table-of-contents)**
 
 ##Examples usage
 
@@ -1008,3 +1017,19 @@ __Or__
   // res contain translated value
   res = doorGetTranslateService.instant('myKey');
 ```
+
+**[Back to top](#table-of-contents)**
+
+# License
+
+The MIT License
+
+Copyright (c) 2017 Mounir R'Quiba http://www.doorgets.com/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**[Back to top](#table-of-contents)**
