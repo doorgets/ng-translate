@@ -4,6 +4,8 @@ Angular 2 (ngx) ng2 translate module i18n (internationalization) from JSON file 
 
 Demo: http://www.ng-translate.com
 
+Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
+
 #Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
