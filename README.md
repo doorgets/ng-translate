@@ -6,7 +6,7 @@ Demo: http://www.ng-translate.com
 
 Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
 
-#Table of contents
+# Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
   * [SystemJS](#configuration-with-systemjs)
@@ -35,16 +35,16 @@ Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
   * [Translation using get method with params](#translation-using-ge-method-with-params)
   * [Translation in instant](#translation-in-instant)
 
-##Installation
+## Installation
 
 Install npm module
 
 ```sh
 npm install doorgets-ng-translate --save
 ```
-##Configuration
+## Configuration
 
-###Configuration with SystemJS
+### Configuration with SystemJS
 
 #### 1. Import doorgets-ng-translate module into systemjs-config.ts file:
 
@@ -154,7 +154,7 @@ Set Languages, Current and Default:
 
 **[Back to top](#table-of-contents)**
 
-###Configuration with Webpack
+### Configuration with Webpack
 
 #### 1. Import doorgets-ng-translate module into vendor.ts file:
 
@@ -232,7 +232,7 @@ export function newNgTranslate(http: Http) {
   ],
 ```
 
-####3. Update app.component.ts file:
+#### 3. Update app.component.ts file:
 ```ts
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import '../../public/css/styles.css';
@@ -280,7 +280,7 @@ Set Languages, Current and Default:
   }
 ```
 
-####4. Finally, create a `locale` folder at the `public` folder of your project with appropiate country traduction files
+#### 4. Finally, create a `locale` folder at the `public` folder of your project with appropiate country traduction files
 ```
 |-- + public/
     |-- + locale/
@@ -297,7 +297,7 @@ Set Languages, Current and Default:
 
 **[Back to top](#table-of-contents)**
 
-###Configuration with Ionic2
+### Configuration with Ionic2
 
 #### 1. Update app.module.ts file
 
@@ -437,7 +437,7 @@ Set Languages, Current and Default:
   });
 ```
 
-####4. Finally, create a `locale` folder at the `assets` folder of your project with appropiate country traduction files
+#### 3. Finally, create a `locale` folder at the `assets` folder of your project with appropiate country traduction files
 ```
 |-- + resources/
 |-- + src/
@@ -459,9 +459,9 @@ Set Languages, Current and Default:
 
 **[Back to top](#table-of-contents)**
 
-##How it works
+## How it works
 
-###Interpolation without params
+### Interpolation without params
 Translation file:
 ```json
   {
@@ -481,7 +481,7 @@ Or your can use key and subkey:
   "hello.form" // result => Comment ça va?
 ```
 
-###Interpolation with Simple params
+### Interpolation with Simple params
 
 > Params works with __collection__ `['firstParam', 'secondParam', '...']`, __not__ Object `{}`
 >
@@ -504,7 +504,7 @@ Collection params: __["John Doe", "Mounir R'Quiba", "Paris"]__
   // result => "Salut John Doe, je m'appel Mounir R'Quiba, je vie à Paris"
 ```
 
-###Interpolation with Pluralization params
+### Interpolation with Pluralization params
 > Pluralizaition works with THE BANANA IN THE BOX `[(` open tag and `)]` to close tag
 >
 > Every block is serparated by a pipe `|`
@@ -539,7 +539,7 @@ Explanation
 
 
 
-###Interpolation with Zero value params
+### Interpolation with Zero value params
 > Zero value works with THE BANANA IN THE BOX `[(` open tag and `)]` to close tag
 >
 > Every block is serparated by a pipe `|`
@@ -585,9 +585,9 @@ Explanation
 
 **[Back to top](#table-of-contents)**
 
-##Examples usage
+## Examples usage
 
-###Simple translation
+### Simple translation
 
 __./locale/fr.json__
 ```json
@@ -617,7 +617,7 @@ __@Pipe:__
 > *Output:* __Êtes-vous prêt ?__
 
 
-###Simple translation from shortcut
+### Simple translation from shortcut
 
 __./locale/fr.json__
 ```json
@@ -648,7 +648,7 @@ __@Pipe:__
 
 > *Output:* __Êtes-vous prêt ?__
 
-###Translate with params
+### Translate with params
 
 __./locale/fr.json__
 ```json
@@ -683,7 +683,7 @@ myName = Mounir R'Quiba
 
 > *Output:* __Salut Mounir R'Quiba__
 
-###Translate with params from shortcut
+### Translate with params from shortcut
 
 __./locale/fr.json__
 ```json
@@ -723,7 +723,7 @@ myName = Mounir R'Quiba;
 
 
 
-###Translate with muliple params
+### Translate with muliple params
 
 __./locale/fr.json__
 ```json
@@ -763,7 +763,7 @@ myName = Mounir R'Quiba; myLanguage = Angular 2;
 
 
 
-###Translate with muliple params from shortcut
+### Translate with muliple params from shortcut
 
 __./locale/fr.json__
 ```json
@@ -803,7 +803,7 @@ myName = Mounir R'Quiba; myLanguage = Mounir R'Quiba
 
 
 
-###Translate with plural params
+### Translate with plural params
 
 __./locale/fr.json__
 ```json
@@ -841,7 +841,7 @@ countApple = 2; countBag = 1;
 
 
 
-###Translate with plural params from shortcut
+### Translate with plural params from shortcut
 
 __./locale/fr.json__
 ```json
@@ -881,7 +881,7 @@ countApple = 2; countBag = 1;
 
 
 
-###Translate with Zero value params
+### Translate with Zero value params
 
 __./locale/fr.json__
 ```json
@@ -930,7 +930,7 @@ countApple = 0; countBag = 0;
 
 
 
-###Translate with zero value params from shortcut
+### Translate with zero value params from shortcut
 
 __./locale/fr.json__
 ```json
@@ -979,9 +979,9 @@ countApple = 0; countBag = 0;
 
 > *Output:* __J'ai rien dans mon sac__
 
-##Api Reference
+## Api Reference
 
-###Setup your ng translate module
+### Setup your ng translate module
 __Quick init__
 
 ```ts
@@ -998,23 +998,23 @@ __Or__
  doorGetTranslateService.setDefault('fr');
 ```
 
-###Change current language
+### Change current language
 ```ts
   doorGetTranslateService.setCurrent('en');
 ```
-###Translation using get method
+### Translation using get method
 ```ts
   doorGetTranslateService.get('myKey').subscribe((res: string) => {
     // res contain translated value
   });
 ```
-###Translation using get method with params
+### Translation using get method with params
 ```ts
   doorGetTranslateService.get('myKey', [1, 1]).subscribe((res: string) => {
     // res contain translated value
   });
 ```
-###Translation in instant
+### Translation in instant
 ```ts
   // res contain translated value
   res = doorGetTranslateService.instant('myKey');
