@@ -1,6 +1,6 @@
 # doorgets-ng-translate [![Build Status](https://travis-ci.org/doorgets/ng-translate.svg?branch=master)](https://travis-ci.org/doorgets/ng-translate) [![Dependency Status](https://david-dm.org/doorgets/ng-translate.svg)](https://david-dm.org/doorgets/ng-translate)
 
-Angular 2 (ngx) ng2 translate module i18n (internationalization) from JSON file with pluralization (Zero value state included)
+Best Angular 2/4/5/6 (ngx) ng6 translate module i18n (internationalization) from JSON file with pluralization (Zero value state included)
 
 Demo: http://www.ng-translate.com
 
