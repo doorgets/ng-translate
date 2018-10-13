@@ -1,6 +1,6 @@
 {
   "name": "doorgets-ng-translate",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Angular 2 translation module i18n (internationalization) from JSON file with plural interpolation",
   "main": "bundles/doorgets-ng-translate.umd.js",
   "directories": {},

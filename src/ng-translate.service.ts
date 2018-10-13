@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter, Optional } from '@angular/core';
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs/Rx";
 import { Observer } from "rxjs/Observer";
 
 import { ChangeEventInterface, HandlerInterface } from "./ng-translate.interface";
