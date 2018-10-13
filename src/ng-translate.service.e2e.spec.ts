@@ -3,6 +3,7 @@ import {getTestBed, TestBed} from "@angular/core/testing";
 import {ResponseOptions, Response, XHRBackend, HttpModule} from "@angular/http";
 import {MockBackend, MockConnection} from "@angular/http/testing";
 
+
 import {
   DoorgetsTranslateService,
   DoorgetsTranslateModule,
@@ -12,6 +13,7 @@ import {
 } from '../index';
 
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 
 const mockBackendResponse = (connection: MockConnection, response: string) => {
   connection.mockRespond(new Response(new ResponseOptions({body: response})));
@@ -295,7 +297,7 @@ describe('MissingTranslationHandler', () => {
 
     class MissingObs implements HandlerAbstract {
         handle(params: HandlerInterface): Observable<any> {
-            return Observable.of(`handled: ${params.searchKey}`);
+            return of(`handled: ${params.searchKey}`);
         }
     }
 
