@@ -3,7 +3,6 @@ import {getTestBed, TestBed} from "@angular/core/testing";
 import {ResponseOptions, Response, XHRBackend, HttpModule} from "@angular/http";
 import {MockBackend, MockConnection} from "@angular/http/testing";
 
-
 import {
   DoorgetsTranslateService,
   DoorgetsTranslateModule,
@@ -297,7 +296,7 @@ describe('MissingTranslationHandler', () => {
 
     class MissingObs implements HandlerAbstract {
         handle(params: HandlerInterface): Observable<any> {
-            return of(`handled: ${params.searchKey}`);
+            return Observable.of(`handled: ${params.searchKey}`);
         }
     }
 

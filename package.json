@@ -1,6 +1,6 @@
 {
   "name": "doorgets-ng-translate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular 2 translation module i18n (internationalization) from JSON file with plural interpolation",
   "main": "bundles/doorgets-ng-translate.umd.js",
   "directories": {},
@@ -26,7 +26,9 @@
   "bugs": {
     "url": "https://github.com/doorgets/ng-translate/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "rxjs-compat": "^6.3.3"
+  },
   "devDependencies": {
     "@angular/common": "2.1.2",
     "@angular/compiler": "2.1.2",

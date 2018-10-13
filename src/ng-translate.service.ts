@@ -50,7 +50,7 @@ export class DoorgetsTranslateService {
     } else {
       this.swapLanguage(language);
 
-      return of(this.translations[language]);
+      return Observable.of(this.translations[language]);
     }
   }
 
@@ -144,7 +144,7 @@ export class DoorgetsTranslateService {
       if(DoorgetsFunction.isFunction(translations.subscribe)) {
         return translations;
       } else {
-        return of(translations);
+        return Observable.of(translations);
       }
     }
   }
