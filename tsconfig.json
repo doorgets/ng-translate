@@ -1,26 +1,33 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es5",
-    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "declaration": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "types": [
-      "hammerjs",
-      "jasmine",
-      "node"
+    "importHelpers": true,
+    "target": "es2015",
+    "preserveSymlinks": true,
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "lib": ["es2015", "dom"]
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ng-translate": [
+        "dist/ng-translate/ng-translate",
+        "dist/ng-translate"
+      ]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "examples",
-    "bundles"
-  ],
   "angularCompilerOptions": {
-    "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

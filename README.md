@@ -6,6 +6,9 @@ Demo: http://www.ng-translate.com
 
 Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
 
+
+
+
 # Table of contents
 * [Installation](#installation)
 * [Configuration](#configuration)
@@ -40,7 +43,11 @@ Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
 Install npm module
 
 ```sh
+// Angular 9
 npm install doorgets-ng-translate --save
+
+// Angular 2 -> 8
+npm install doorgets-ng-translate@1.0.4 --save
 ```
 ## Configuration
 
@@ -172,7 +179,70 @@ import 'rxjs';
 import 'doorgets-ng-translate';
 ```
 
-#### 2. Update app.module.ts file:
+#### 2. Update app.module.ts file (Angular 9):
+```ts
+import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+
+import { BrowserModule }  from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+import { DoorgetsTranslateModule , NgTranslate, NgTranslateAbstract } from 'doorgets-ng-translate';
+
+export function newNgTranslate(http: HttpClient) {
+  return new NgTranslate(http, '../../public/locale');
+}
+
+@NgModule({
+  imports: [
+    HttpModule,
+    DoorgetsTranslateModule.forRoot({
+      provide: NgTranslateAbstract,
+      useFactory: (newNgTranslate),
+      deps: [HttpClient]
+    }),
+    BrowserModule
+  ],
+  declarations: [
+    AppComponent
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+```
+Import:
+```ts
+...
+import { HttpModule, Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { DoorgetsTranslateModule , NgTranslate, NgTranslateAbstract } from 'doorgets-ng-translate';
+...
+```
+
+Export:
+```ts
+...
+export function newNgTranslate(http: HttpClient) {
+  return new NgTranslate(http, '../../public/locale');
+}
+...
+```
+
+@NgModule:
+```ts
+  imports: [
+    HttpModule,
+    DoorgetsTranslateModule.forRoot({
+      provide: NgTranslateAbstract,
+      useFactory: (newNgTranslate),
+      deps: [Http]
+    }),
+    BrowserModule
+  ],
+```
+
+#### 2. Update app.module.ts file (Angular 2 -> 8):
 ```ts
 import { NgModule } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';

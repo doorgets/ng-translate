@@ -1,4 +1,5 @@
 import { OnDestroy, PipeTransform, Pipe, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 import { DoorgetsTranslateService } from './ng-translate.service';
 import { ChangeEventInterface } from './ng-translate.interface';
 
@@ -15,7 +16,7 @@ export class DoorgetsTranslatePipe implements PipeTransform, OnDestroy {
   currentKey: string;
   currentParams: any[];
 
-  onLangChange: EventEmitter<ChangeEventInterface>;
+  onLangChange: Subscription;
 
   constructor(private translate: DoorgetsTranslateService, private _ref: ChangeDetectorRef) {}
 

@@ -9,15 +9,20 @@ import { DoorgetsParser } from "./ng-translate.parser";
 import { DoorgetsFunction } from './ng-translate.function';
 
 import "rxjs/add/observable/of";
-import "rxjs/add/operator/share";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/merge";
 import "rxjs/add/operator/toArray";
 
-@Injectable()
+import { share } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class DoorgetsTranslateService {
 
-  public current: string = this.default;
+  public current: string = 'en';
+  public extension: string = '.json';
+
   public onLangChange: EventEmitter<ChangeEventInterface> = new EventEmitter<ChangeEventInterface>();
 
   private translations$: any;
@@ -33,6 +38,10 @@ export class DoorgetsTranslateService {
 
   public setDefault(language: string): void {
     this.default = language;
+  }
+
+  public setExtension(extension: string): void {
+    this.extension = extension;
   }
 
   public setCurrent(language: string): Observable<any> {
@@ -76,8 +85,9 @@ export class DoorgetsTranslateService {
   }
 
   public getTranslation(language: string): Observable<any> {
-    this.translations$ = this.ngTranslate.getTranslation(language).share();
+    this.translations$ = this.ngTranslate.getTranslation(language).pipe(share());
     this.translations$.subscribe((res: Object) => {
+      console.log('this.translations', this.translations);
       this.translations[language] = res;
       this.update();
       this.translations$ = undefined;

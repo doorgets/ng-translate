@@ -1,10 +1,10 @@
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import { NgTranslate } from './ng-translate';
 
 export class DoorgetsFunction {
 
-  public static ngTranslateFactory(http: Http) {
+  public static ngTranslateFactory(http: HttpClient) {
       return new NgTranslate(http);
   }
 
