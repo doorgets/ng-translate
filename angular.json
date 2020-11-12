@@ -42,6 +42,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-translate"
+    }
+  },
+  "defaultProject": "ng-translate",
+  "cli": {
+    "analytics": false
+  }
 }

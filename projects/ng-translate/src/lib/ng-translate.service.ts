@@ -86,9 +86,8 @@ export class DoorgetsTranslateService {
 
   public getTranslation(language: string): Observable<any> {
     this.translations$ = this.ngTranslate.getTranslation(language).pipe(share());
-    this.translations$.subscribe((res: Object) => {
-      console.log('this.translations', this.translations);
-      this.translations[language] = res;
+    this.translations$.subscribe((res: Response) => {
+      this.translations[language] = !res.headers && res || res.json();
       this.update();
       this.translations$ = undefined;
     }, (err: any) => {
