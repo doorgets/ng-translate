@@ -87,7 +87,7 @@ export class DoorgetsTranslateService {
   public getTranslation(language: string): Observable<any> {
     this.translations$ = this.ngTranslate.getTranslation(language).pipe(share());
     this.translations$.subscribe((res: Response) => {
-      this.translations[language] = !res.headers && res || res.json();
+      this.translations[language] = res.json();
       this.update();
       this.translations$ = undefined;
     }, (err: any) => {
@@ -140,7 +140,7 @@ export class DoorgetsTranslateService {
           observer.error(err);
         };
         this.translations$.subscribe((translations: any) => {
-          translations = this.output(searchKey, translations, params);
+          translations = this.output(searchKey, translations.json(), params);
           if(DoorgetsFunction.isFunction(translations.subscribe)) {
             translations.subscribe(onComplete, onError);
           } else {
