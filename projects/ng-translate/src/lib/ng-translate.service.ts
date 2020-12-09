@@ -140,7 +140,7 @@ export class DoorgetsTranslateService {
           observer.error(err);
         };
         this.translations$.subscribe((translations: any) => {
-          translations = this.output(searchKey, translations.json(), params);
+          translations = this.output(searchKey, translations.json && translations.json() || translations, params);
           if(DoorgetsFunction.isFunction(translations.subscribe)) {
             translations.subscribe(onComplete, onError);
           } else {
