@@ -1,4 +1,4 @@
-import { OnDestroy, PipeTransform, Pipe, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { OnDestroy, PipeTransform, Pipe, ChangeDetectorRef } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { DoorgetsTranslateService } from './ng-translate.service';
 import { ChangeEventInterface } from './ng-translate.interface';
