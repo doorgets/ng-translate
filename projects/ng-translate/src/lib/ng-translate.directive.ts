@@ -1,5 +1,5 @@
 import { Directive, AfterViewChecked, OnInit, OnDestroy, ElementRef, Input } from '@angular/core';
-import { Subscription } from "rxjs/Subscription";
+import { Subscription } from "rxjs";
 
 import { DoorgetsFunction } from './ng-translate.function';
 import { DoorgetsTranslateService } from './ng-translate.service';

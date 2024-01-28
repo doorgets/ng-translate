@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter, Optional } from '@angular/core';
-import { Observable } from "rxjs/Rx";
-import { Observer } from "rxjs/Observer";
+import { Observable, Observer } from "rxjs";
 
 import { ChangeEventInterface, HandlerInterface } from "./ng-translate.interface";
 import { NgTranslateAbstract, HandlerAbstract } from "./ng-translate.abstract";
@@ -8,12 +7,8 @@ import { NgTranslateAbstract, HandlerAbstract } from "./ng-translate.abstract";
 import { DoorgetsParser } from "./ng-translate.parser";
 import { DoorgetsFunction } from './ng-translate.function';
 
-import "rxjs/add/observable/of";
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/merge";
-import "rxjs/add/operator/toArray";
-
-import { share } from 'rxjs/operators';
+import { of  } from 'rxjs';
+import { share, map, merge } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -59,7 +54,7 @@ export class DoorgetsTranslateService {
     } else {
       this.swapLanguage(language);
 
-      return Observable.of(this.translations[language]);
+      return of(this.translations[language]);
     }
   }
 
@@ -152,7 +147,7 @@ export class DoorgetsTranslateService {
       let translations = this.output(searchKey, this.translations[this.current], params);
       return DoorgetsFunction.isFunction(translations.subscribe)
         ? translations
-        : Observable.of(translations);
+        : of(translations);
     }
   }
 
