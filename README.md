@@ -43,11 +43,13 @@ Plunker: https://plnkr.co/edit/bpqyjTLuFIzZtR33Ov24?p=preview
 Install npm module
 
 ```sh
-// Angular 9
+// Angular 15+
 npm install doorgets-ng-translate --save
 
 // Angular 2 -> 8
 npm install doorgets-ng-translate@1.0.4 --save
+
+
 ```
 ## Configuration
 
