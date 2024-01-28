@@ -21,7 +21,7 @@ export class DoorgetsTranslateModule {
         provide: NgTranslateAbstract,
         useFactory: DoorgetsFunction.ngTranslateFactory,
         deps: [HttpClient]
-    }): ModuleWithProviders {
+    }): ModuleWithProviders<DoorgetsTranslateModule> {
         return {
             ngModule: DoorgetsTranslateModule,
             providers: [
