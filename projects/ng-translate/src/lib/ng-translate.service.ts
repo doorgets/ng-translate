@@ -150,11 +150,9 @@ export class DoorgetsTranslateService {
       });
     } else {
       let translations = this.output(searchKey, this.translations[this.current], params);
-      if(DoorgetsFunction.isFunction(translations.subscribe)) {
-        return translations;
-      } else {
-        return Observable.of(translations);
-      }
+      return DoorgetsFunction.isFunction(translations.subscribe)
+        ? translations
+        : Observable.of(translations);
     }
   }
 
@@ -164,11 +162,9 @@ export class DoorgetsTranslateService {
     }
 
     let translations = this.output(searchKey, this.translations[this.current], params);
-    if(DoorgetsFunction.isDefined(translations.subscribe)) {
-      return searchKey;
-    } else {
-      return translations;
-    }
+    return DoorgetsFunction.isDefined(translations.subscribe)
+      ? searchKey
+      : translations;
   }
 
   public reload(language: string): Observable<any> {

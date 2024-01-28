@@ -6,7 +6,7 @@ describe('NgTranslateComponent', () => {
   let component: NgTranslateComponent;
   let fixture: ComponentFixture<NgTranslateComponent>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
       declarations: [ NgTranslateComponent ]
     })
