@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter, Optional } from '@angular/core';
-import { Observable, Observer } from "rxjs";
+import { Observer } from "rxjs";
+import { Observable } from "rxjs/Rx";
 
 import { ChangeEventInterface, HandlerInterface } from "./ng-translate.interface";
 import { NgTranslateAbstract, HandlerAbstract } from "./ng-translate.abstract";
@@ -126,7 +127,7 @@ export class DoorgetsTranslateService {
     }
 
     if(this.translations$) {
-      return Observable.create((observer: Observer<string>) => {
+      return new Observable((observer: Observer<string>) => {
         let onComplete = (res: string) => {
           observer.next(res);
           observer.complete();
