@@ -77,7 +77,7 @@ export class DoorgetsTranslatePipe implements PipeTransform, OnDestroy {
     if (!this.onLangChange) {
       this.onLangChange = this.translate.onLangChange.subscribe((event: ChangeEventInterface) => {
         if (this.currentKey) {
-          this.currentKey = null;
+          this.currentKey = '';
           this.doUpdateEvent(sentence, this.currentParams, event.translations);
         }
       });
